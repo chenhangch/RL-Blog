@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pai-api" />
+        <module name="pai-core" />
+        <module name="pai-web" />
+        <module name="pai-service" />
+        <module name="pai-ui" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="pai-api" options="-parameters" />
+      <module name="pai-core" options="-parameters" />
+      <module name="pai-service" options="-parameters" />
+      <module name="pai-ui" options="-parameters" />
+      <module name="pai-web" options="-parameters" />
+    </option>
+  </component>
+</project>
