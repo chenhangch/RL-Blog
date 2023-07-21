@@ -1,10 +1,13 @@
 # spring 配置
 spring:
   config:
-    import:
+    import: application.yml, application-dal.yml, application-web.yml
 
 # mybatis - plus
-mybatis
+mybatis-plus:
+  configuration:
+    # 开启驼峰
+    map-underscore-to-camel-case: true
 
 # knife4j配置
 knife4j:
@@ -31,3 +34,7 @@ knife4j:
     enable: false
     username: admin
     password: admin
+
+# 数据库名
+database:
+  name: pai

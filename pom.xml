@@ -33,6 +33,15 @@
         <knife4j.version>4.0.0</knife4j.version>
         <hutool-all.version>5.8.15</hutool-all.version>
 
+        <qrcode-plugin.version>3.0.0</qrcode-plugin.version>
+
+        <guava.version>18.0</guava.version>
+        <commons-io.version>2.11.0</commons-io.version>
+        <kryo.version>5.4.0</kryo.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -44,7 +53,7 @@
             </dependency>
             <dependency>
                 <groupId>com.github.pai</groupId>
-                <artifactId>pai-core</artifactId>
+                <artifactId>pai-ui</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
@@ -54,13 +63,20 @@
             </dependency>
             <dependency>
                 <groupId>com.github.pai</groupId>
-                <artifactId>pai-ui</artifactId>
+                <artifactId>pai-core</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
             <dependency>
-                <groupId>com.github.pai</groupId>
-                <artifactId>pai-web</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.liuyueyi.media</groupId>
+                <artifactId>qrcode-plugin</artifactId>
+                <version>${qrcode-plugin.version}</version>
             </dependency>
 
             <dependency>
@@ -69,16 +85,54 @@
                 <version>${mybaits-plus.version}</version>
             </dependency>
 
+
+
             <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.esotericsoftware</groupId>
+                <artifactId>kryo</artifactId>
+                <version>${kryo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool-all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!-- 引入 MapStruct -->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+                <scope>compile</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -135,7 +189,6 @@
             <id>ali maven</id>
             <name>aliyun maven</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-            <layout>default</layout>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>

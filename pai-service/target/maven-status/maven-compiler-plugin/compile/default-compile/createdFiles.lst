@@ -1,0 +1,8 @@
+com\github\pai\service\user\repository\entity\UserDO.class
+com\github\pai\service\user\service\UserService.class
+com\github\pai\service\user\repository\mapper\UserInfoMapper.class
+com\github\pai\service\user\repository\mapper\UserMapper.class
+com\github\pai\service\user\repository\entity\UserInfoDO.class
+com\github\pai\service\user\service\user\UserServiceImpl.class
+com\github\pai\service\ServiceAutoConfig.class
+com\github\pai\service\user\repository\dao\UserDao.class
