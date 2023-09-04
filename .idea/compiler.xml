@@ -7,21 +7,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pai-api" />
-        <module name="pai-core" />
-        <module name="pai-web" />
-        <module name="pai-service" />
-        <module name="pai-ui" />
+        <module name="rl-core" />
+        <module name="rl-service" />
+        <module name="rl-web" />
+        <module name="rl-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pai" target="1.8" />
+      <module name="pai-ui" target="1.8" />
+      <module name="rl" target="1.8" />
+      <module name="RL-api" target="1.8" />
+      <module name="RL-core" target="1.8" />
+      <module name="RL-service" target="1.8" />
+      <module name="rl-ui" target="1.8" />
+      <module name="RL-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="pai-api" options="-parameters" />
-      <module name="pai-core" options="-parameters" />
-      <module name="pai-service" options="-parameters" />
+      <module name="RL-api" options="-parameters" />
+      <module name="RL-core" options="" />
+      <module name="RL-service" options="-parameters" />
+      <module name="RL-web" options="-parameters" />
       <module name="pai-ui" options="-parameters" />
-      <module name="pai-web" options="-parameters" />
+      <module name="rl-api" options="-parameters" />
+      <module name="rl-core" options="-parameters" />
+      <module name="rl-service" options="-parameters" />
+      <module name="rl-ui" options="-parameters" />
+      <module name="rl-web" options="-parameters" />
     </option>
   </component>
 </project>

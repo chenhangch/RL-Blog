@@ -1,0 +1,40 @@
+# spring 配置
+spring:
+  config:
+    import: application.yml, application-dal.yml, application-web.yml
+
+# mybatis - plus
+mybatis-plus:
+  configuration:
+    # 开启驼峰
+    map-underscore-to-camel-case: true
+
+# knife4j配置
+knife4j:
+  enable: true
+  openapi:
+    title: Π社区
+    version: 0.0.1
+    group:
+      admin:
+        group-name: 后台接口分组
+        api-rule: package
+        api-rule-resources:
+          - com.robotlab.blog.web.admin
+      front:
+        group-name: 前台接口
+        api-rule: package
+        api-rule-resources:
+          - com.robotlab.blog.web.front
+  setting:
+    language: zh_cn
+  production: true
+  # 访问API主页权限控制
+  basic:
+    enable: false
+    username: admin
+    password: admin
+
+# 数据库名
+database:
+  name: rl-blog

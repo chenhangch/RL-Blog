@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>pai-api</module>
-        <module>pai-core</module>
-        <module>pai-service</module>
-        <module>pai-ui</module>
-        <module>pai-web</module>
+        <module>rl-api</module>
+        <module>rl-core</module>
+        <module>rl-service</module>
+        <module>rl-web</module>
     </modules>
 
     <parent>
@@ -19,92 +17,90 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.github.pai</groupId>
-    <artifactId>pai</artifactId>
+    <groupId>com.robotlab.blog</groupId>
+    <artifactId>rl-blog</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>pai-forum</name>
+    <name>rl-blog</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
         <mybaits-plus.version>3.5.2</mybaits-plus.version>
         <knife4j.version>4.0.0</knife4j.version>
         <hutool-all.version>5.8.15</hutool-all.version>
-
         <qrcode-plugin.version>3.0.0</qrcode-plugin.version>
-
         <guava.version>18.0</guava.version>
         <commons-io.version>2.11.0</commons-io.version>
         <kryo.version>5.4.0</kryo.version>
         <commons-collections4.version>4.4</commons-collections4.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
-
+        <itextpdf.version>5.5.13.3</itextpdf.version>
+        <ignl.version>3.2.11</ignl.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <jwt.version>4.4.0</jwt.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.github.pai</groupId>
-                <artifactId>pai-api</artifactId>
+                <groupId>com.robotlab.blog</groupId>
+                <artifactId>rl-api</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.github.pai</groupId>
-                <artifactId>pai-ui</artifactId>
+                <groupId>com.robotlab.blog</groupId>
+                <artifactId>rl-service</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.github.pai</groupId>
-                <artifactId>pai-service</artifactId>
+                <groupId>com.robotlab.blog</groupId>
+                <artifactId>rl-core</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
-            <dependency>
-                <groupId>com.github.pai</groupId>
-                <artifactId>pai-core</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-
+            <!-- 谷歌提供的一个核心Java类库 -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
-
+            <!-- 二维码 -->
             <dependency>
                 <groupId>com.github.liuyueyi.media</groupId>
                 <artifactId>qrcode-plugin</artifactId>
                 <version>${qrcode-plugin.version}</version>
             </dependency>
-
+            <!-- mybatis - plus -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybaits-plus.version}</version>
             </dependency>
-
-
-
+            <!-- IO 功能-->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
-
+            <!-- 序列化 -->
             <dependency>
                 <groupId>com.esotericsoftware</groupId>
                 <artifactId>kryo</artifactId>
                 <version>${kryo.version}</version>
             </dependency>
-
+            <!--pdf工具-->
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>itextpdf</artifactId>
+                <version>${itextpdf.version}</version>
+            </dependency>
+            <!--扩展和增强 Java集合框架的类型-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections4.version}</version>
             </dependency>
-
+            <!--公共基础类-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
@@ -115,6 +111,12 @@
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool-all.version}</version>
+            </dependency>
+            <!--表达式引擎-->
+            <dependency>
+                <groupId>ognl</groupId>
+                <artifactId>ognl</artifactId>
+                <version>${ignl.version}</version>
             </dependency>
 
             <dependency>
@@ -134,6 +136,12 @@
                 <version>${mapstruct.version}</version>
                 <scope>compile</scope>
             </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>org.openpnp</groupId>-->
+<!--                <artifactId>opencv</artifactId>-->
+<!--                <version>4.6.0-0</version>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
@@ -182,7 +190,6 @@
             </resource>
         </resources>
     </build>
-
 
     <repositories>
         <repository>

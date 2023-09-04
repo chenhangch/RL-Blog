@@ -7,6 +7,16 @@
       <option name="url" value="https://maven.aliyun.com/repository/public" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://nexus.nancalcloud.com/repository/maven-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ali maven" />
+      <option name="name" value="aliyun maven" />
+      <option name="url" value="http://maven.aliyun.com/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="ali maven" />
       <option name="name" value="aliyun maven" />
       <option name="url" value="https://maven.aliyun.com/repository/public" />
@@ -35,6 +45,11 @@
       <option name="id" value="snapshots" />
       <option name="name" value="snapshots" />
       <option name="url" value="https://maven.aliyun.com/repository/public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-milestones" />
+      <option name="name" value="Spring Milestones" />
+      <option name="url" value="https://repo.spring.io/libs-milestone" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />

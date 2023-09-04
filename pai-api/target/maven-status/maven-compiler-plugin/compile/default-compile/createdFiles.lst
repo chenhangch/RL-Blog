@@ -1,6 +1,0 @@
-com\github\pai\api\model\vo\ResVo.class
-com\github\pai\api\model\vo\Status.class
-com\github\pai\api\model\entity\BaseDTO.class
-com\github\pai\api\model\entity\BaseDO.class
-com\github\pai\api\model\vo\user\dto\BaseUserInfoDTO.class
-com\github\pai\api\model\vo\contants\StatusEnum.class
