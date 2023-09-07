@@ -19,7 +19,7 @@ public class ResVo<T> implements Serializable {
     private Status status;
 
     @ApiModelProperty(value = "返回的实体结果", required = true)
-    private T result;
+    private T data;
 
     public ResVo(Status status) {
         this.status = status;
@@ -27,7 +27,7 @@ public class ResVo<T> implements Serializable {
 
     private ResVo(T t) {
         this.status = Status.newStatus(StatusEnum.SUCCESS);
-        this.result = t;
+        this.data = t;
     }
 
     public static <T> ResVo<T> ok(T t) {

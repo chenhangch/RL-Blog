@@ -13,11 +13,18 @@ import lombok.Getter;
 public enum StatusEnum {
     SUCCESS(0, "OK"),
 
-    SOMETHING_ERROR(999, "ERROR");
+    SOMETHING_ERROR(999, "ERROR"),
 
-    private int code;
+    // 全局传参异常
+    ILLEGAL_ARGUMENTS(100_002_001,"参数异常"),
+    ILLEGAL_ARGUMENTS_PRINTF(100_002_002,"参数异常: %s"),
 
-    private String msg;
+    // 全局权限异常
+    FORBID_ERROR(100_403_001, "无权限");
+
+    private final int code;
+
+    private final String msg;
 
     StatusEnum(int code, String msg) {
         this.code = code;
